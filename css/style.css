@@ -1,16 +1,20 @@
-* {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
 
 
-
-html {
-    height: 100%;
-    font-family: sans-serif;
+.main-section {
+  display: block;
+  overflow: hidden;
+  height: 700px;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
+
+.main-section.heavy0heavy {
+  position: relative;
+  top: 75px;
+}
 
 .main-body {
     overflow: visible;
@@ -18,9 +22,10 @@ html {
         overflow-y: visible;
     margin:0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-image: url("../images/background.png");
+    background-image: url(../images/background.png);
     background-size: 100%;
     position: relative;
+    z-index: 0;
 }
 
 body {
@@ -31,8 +36,7 @@ body {
     font-size: 14px;
     line-height: 20px;
     color: #fff;
-  }
-
+  } 
 
   
 .w-container {
@@ -73,30 +77,6 @@ body {
   .w-container::after {
     clear: both;
   }
-
-.main-section.heavy0heavy {
-    position: relative;
-    top: 75px;
-}
-
-.main-section {
-    display: block;
-    overflow: hidden;
-    height: 700px;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-  }
-
-.nolan {
-    width: 500px;
-    height: 500px;
-    background-image: url("../images/nolan.png");
-    position: absolute;
-    background-position: center;
-    background-size: contain;
-}
 
 .nav {
     position: fixed;
@@ -217,17 +197,21 @@ a {
     margin-top: 10px;
 }
 
-h1 {
-    font-size: 38px;
-    line-height: 44px;
-    margin-top: 20px;
-    margin: .67em 0;
-    color: aqua;
+@media print{
+  h1 {
+      font-size: 38px;
+      line-height: 44px;
+      margin-top: 20px;
+      margin: .67em 0;
+      color: aqua;
+    }
   }
 
-h1, h2, h3, h4, h5, h6 {
-    font-weight: bold;
-    margin-bottom: 10px;
+@media print{
+  h1, h2, h3, h4, h5, h6 {
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
 }
 
 .heading-2.name {
@@ -237,10 +221,10 @@ h1, h2, h3, h4, h5, h6 {
     padding-bottom: 29px;
     font-size: 6.5em;
     line-height: auto;
-    
 }
 
 .heading-2.titlesd {
+    -webkit-appearance: none;
     position: absolute;
     top: 87px;
     z-index: 2;
@@ -248,6 +232,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 7em;
     line-height: 0.8em;
     letter-spacing: -0.7px;
+    
   }
   
 .vf {
@@ -306,13 +291,28 @@ p {
     flex: 1;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0;
+}
+
+.image-2 {
+  height: 100%;
+  background-image: url(../images/iconn.png);
+  background-size: contain;
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
 .image-containers {
     height: 100%;
-    background-image: url(/images/nolan.png);
+    background-image: url(../images/nolan.png);
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-    position: relative;
     z-index: 50;
 }
 
