@@ -305,6 +305,9 @@ img {
   display: block;
   margin-right: auto;
   margin-left: auto;
+  border: 0;
+  border-radius: 0;
+  background-repeat: no-repeat;
 }
 
 .image-containers {
